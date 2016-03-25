@@ -2,18 +2,6 @@ import java.util.List;
 import java.util.Stack;
 import java.util.ArrayList;
 
-
-class TreeNode {
-	int val;
-	TreeNode left;
-	TreeNode right;
-	TreeNode(int x) { 
-		this.val = x;
-		left = null;
-		right = null;
-	}
-}
-
 public class PreorderTraversal {
 
 	public static List<Integer> iterative(TreeNode root) {

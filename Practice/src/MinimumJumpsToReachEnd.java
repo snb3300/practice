@@ -23,8 +23,8 @@ public class MinimumJumpsToReachEnd {
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-//		int[] a = {1, 3, 5, 8, 9, 2, 6, 7, 6, 8, 9};
-		int[] a = {1,1,1,1,1};
+		int[] a = {1, 3, 5, 8, 9, 2, 6, 7, 6, 8, 9};
+//		int[] a = {1,1,1,1,1};
 		System.out.println(getMinJumps(a));
 	}
 
