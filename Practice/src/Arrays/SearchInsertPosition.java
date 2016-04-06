@@ -1,3 +1,4 @@
+package Arrays;
 
 public class SearchInsertPosition {
 	public static int searchInsert(int[] nums, int target) {
