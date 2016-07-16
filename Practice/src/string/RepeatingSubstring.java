@@ -7,7 +7,7 @@ public class RepeatingSubstring {
 		int n = str.length();
 		PatternSearch.computeLPS(str.toCharArray(), lps);
 		PatternSearch.printLPS(lps);
-		return (n % (n - lps[n - 1]) == 0) ? true : false;
+		return n % (n - lps[n - 1]) == 0;
 	}
 	
 	public static void main(String[] args) {

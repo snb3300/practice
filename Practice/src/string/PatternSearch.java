@@ -63,7 +63,13 @@ public class PatternSearch {
 		String pattern2 = "ABCABY";
 		String text2 = "ABXABCABYABCABCABY";
 		
-		KMPSearch(pattern2.toCharArray(), text2.toCharArray());
+		String pattern3 = "Geeks";
+		String text3 = "GeeksGeeks";
+		
+		String pattern4 = "ababc";
+		String text4 = "abadbababcab";
+		
+		KMPSearch(pattern4.toCharArray(), text4.toCharArray());
 	}
 
 }
