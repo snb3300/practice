@@ -7,6 +7,11 @@ class ListNode {
 	    	  val = x;
 	    	  next = null;
 	      }
+	      
+	      public String toString() {
+			return Integer.toString(val);
+	    	  
+	      }
 	  }
 
 
@@ -47,7 +52,7 @@ public class RotateList {
     }
 	
 	
-	private static void printList(ListNode head) {
+	static void printList(ListNode head) {
 		ListNode n = head;
 		while(n != null) {
 			System.out.print(" " + n.val);

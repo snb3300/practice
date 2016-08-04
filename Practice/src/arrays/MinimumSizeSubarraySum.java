@@ -3,27 +3,36 @@ package arrays;
 public class MinimumSizeSubarraySum {
 
 	public static int minSubArrayLen(int s, int[] nums) {
-        int curr_sum = 0;
+		int minLength = nums.length + 1;
+        int curSum = 0;
         int start = 0;
-        int end = 0;
-        int n = nums.length;
-        int min_len = n;
+        int i = 0;
         
-        while(end < n) {
-            while(curr_sum <= s && end < n)
-                curr_sum += nums[end++];
-                
-            while(curr_sum >= s && start < end) {
-                min_len = Integer.min(min_len, end - start);
-                curr_sum -= nums[start++];
+        while(i <= nums.length) {
+            if(curSum >= s) {
+                if(start == i - 1)
+                    return 1;
+                minLength = Integer.min(minLength, i - start);
+                curSum -= nums[start++];
+            } else {
+                if(i == nums.length)
+                    break;
+                curSum += nums[i++];
             }
         }
-        return nums.length > 0 ? min_len : 0;
+        // for(int i = 0; i < nums.length; i++) {
+        //     curSum += nums[i];
+        //     while(start <= i && curSum >= s) {
+        //         minLength = Integer.min(minLength, i - start + 1);
+        //         curSum -= nums[start++];
+        //     }
+        // }
+        return minLength == nums.length + 1 ? 0 : minLength;
     }
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int[] arr = {2,3,1,2,4,3};
-		int s = 7;
+		int[] arr = {1,2,3,4,5};
+		int s = 11;
 		System.out.println(minSubArrayLen(s, arr));
 		
 	}
