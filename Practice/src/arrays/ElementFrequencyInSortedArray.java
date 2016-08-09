@@ -1,8 +1,5 @@
 package arrays;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * Count the Frequency of each element in sorted array
  * 

@@ -6,6 +6,7 @@ public class Graph {
 	private int vertices;
 	private List<Integer> adjList[];
 	
+	@SuppressWarnings("unchecked")
 	public Graph(int v) {
 		vertices = v;
 		adjList = new List[vertices];

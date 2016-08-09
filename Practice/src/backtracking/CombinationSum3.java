@@ -1,14 +1,10 @@
 package backtracking;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
-import java.util.PriorityQueue;
 import java.util.Set;
 import java.util.TreeSet;
-
-import javax.print.attribute.HashAttributeSet;
 
 public class CombinationSum3 {
 

@@ -40,7 +40,6 @@ public class MaximumRectangularAreaInHistogram {
 		// TODO Auto-generated method stub
 		int[] heights = {2,1,5,6,2,3};
 		System.out.println(largestRectangleArea(heights));
-		int i = new Integer('1');
 	}
 
 }

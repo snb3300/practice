@@ -36,6 +36,7 @@ public class UniquePathWithObstacles {
 		// TODO Auto-generated method stub
 		int[][] m1 = {{0,1,0},{0,1,0},{0,0,0}};
 		int[][] m2 = {{0,1,0,0,0},{1,0,0,0,0},{0,0,0,0,0},{0,0,0,0,0}};
+		System.out.println(uniquePaths(m1));
 		System.out.println(uniquePaths(m2));
 	}
 

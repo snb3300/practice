@@ -30,7 +30,7 @@ public class PreorderTraversal {
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int[] tree = {6,2,1,4,3,5,7,9,8};
+//		int[] tree = {6,2,1,4,3,5,7,9,8};
 		TreeNode root = new TreeNode(3);
 		
 		// left sub tree
