@@ -5,6 +5,12 @@ import java.util.List;
 public class Graph {
 	private int vertices;
 	private List<Integer> adjList[];
+
+	
+	public Graph() {
+		vertices = 0;
+		adjList = null;
+	}
 	
 	@SuppressWarnings("unchecked")
 	public Graph(int v) {
@@ -25,4 +31,9 @@ public class Graph {
 	public List<Integer> getAdjList(int vertex) {
 		return adjList[vertex];
 	}
+	
+	public boolean isEmpty() {
+		return vertices == 0;
+	}
+	
 }
