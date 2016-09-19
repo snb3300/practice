@@ -2,34 +2,32 @@ package arrays;
 
 public class MaximumProductSubarray {
 
-	int getMaximumProductInN(int[] input) {
-	     int[] max = new int[input.length];
-	     int[] min = new int[input.length];
+	int getMaximumProductInN(int[] nums) {
+		
+		int maxProduct = 1;
+	    int local_max = 1;
+	    int local_min = 1;
 	     
-	     max[0] = input[0];
-	     min[0] = input[0];
-	     int maxProduct = input[0];
-	     
-	     for(int i = 1; i < input.length; i++) {
-	     
-	         if (input[i] > 0) 
-	         {
-	             max[i] = Integer.max(input[i], input[i] * max[i - 1]);
-	             min[i] = Integer.min(input[i], input[i] * min[i - 1]);         
-	         } else {
-	             max[i] = Integer.max(input[i], input[i] * min[i - 1]);
-	             min[i] = Integer.min(input[i], input[i] * max[i - 1]);         
-	         }
-	         
-	         maxProduct = Integer.max(maxProduct, max[i]);
+	    for(int i = 0; i < nums.length; i++) {
+	    	 if(nums[i] > 0) {
+	    		 local_max = local_max * nums[i];
+	    		 local_min = Integer.min(local_min * nums[i], 1);
+	    	 } else if (nums[i] == 0) {
+	    		 local_max = 1;
+	    		 local_min = 1;
+	    	 } else {
+	    		 int tmp = local_max;
+	    		 local_max = Integer.max(local_min * nums[i], 1);
+	    		 local_min = tmp * nums[i];
+	    	 }
+	    	 maxProduct = Integer.max(maxProduct, local_max);
 	     }
-	     
 	     return maxProduct;
 	}
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int[] input = {-2,-3,-1, -3, -4, 1, -1};
+		int[] input = {-2,-3,-1, -3, -4, 0, -1};
 		System.out.println(new MaximumProductSubarray().getMaximumProductInN(input));
 	}
 
