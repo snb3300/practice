@@ -91,7 +91,7 @@ public class RobotMoves {
 				currentFace = getNewFace(currentFace, 'l');
 				break;
 			case 'R':
-				currentFace = getNewFace(currentFace, 'l');
+				currentFace = getNewFace(currentFace, 'r');
 				break;
 			default: break;
 			}
